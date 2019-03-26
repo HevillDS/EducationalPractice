@@ -1,0 +1,11 @@
+/home/hevill/pract/bin/Debug/netcoreapp2.2/pract.deps.json
+/home/hevill/pract/bin/Debug/netcoreapp2.2/pract.runtimeconfig.json
+/home/hevill/pract/bin/Debug/netcoreapp2.2/pract.runtimeconfig.dev.json
+/home/hevill/pract/bin/Debug/netcoreapp2.2/pract.dll
+/home/hevill/pract/bin/Debug/netcoreapp2.2/pract.pdb
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.csprojAssemblyReference.cache
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.csproj.CoreCompileInputs.cache
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.AssemblyInfoInputs.cache
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.AssemblyInfo.cs
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.dll
+/home/hevill/pract/obj/Debug/netcoreapp2.2/pract.pdb
