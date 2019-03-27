@@ -9,12 +9,12 @@ namespace pr2
 {
     class Band 
     {
-        public string BandName; //название
-        public string Country; //страна
-        public string StartYear; //год создания
-        public string Language; //язык песен
-        public List<string> Instruments; //основные музыкальные инструменты
-        public List<Genres> Genres;  //поджанры
-        public List<Members> Members; //участники, поля: лидер, основной состав, для переопределенных + временные участники
+        public string BandName { get; set; } //название
+        public string Country { get; set; } //страна
+        public string StartYear { get; set; } //год создания
+        public string Language { get; set; } //язык песен
+        public List<string> Instruments { get; set; } //основные музыкальные инструменты
+        public List<Genres> Genres { get; set; }  //поджанры
+        public List<Members> Members { get; set; } //участники, поля: лидер, основной состав, для переопределенных + временные участники
     }
 }

@@ -4,7 +4,7 @@ namespace pr2
 {
     class Members 
     {
-        public string Leader;
-        public List<string> Others;
+        public string Leader { get; set; }
+        public List<string> Others { get; set; }
     }
 }

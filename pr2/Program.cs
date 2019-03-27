@@ -9,9 +9,18 @@ namespace pr2
 {
     class Program
     {
-        static void Main(string[] args)
+        private static Band GetDisturbed()
         {
-            Console.WriteLine("Hello World!");
+            Band Disturbed = new Band();
+            Disturbed.Country = USA;
+            Disturbed.StartYear = 1994;
+            Disturbed.Lanuage = english;
+            Disturbed.Instruments = ;
+            Disturbed.Genres = new Genres
+            {
+               MainGenre = ;
+               Subgenres = ;
+            }
         }
     }
 }

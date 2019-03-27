@@ -4,7 +4,7 @@ namespace pr2
 {
     class Genres 
     {
-        public string MainGenre;
-        public List<string> Subgenres;
+        public string MainGenre { get; set; }
+        public List<string> Subgenres { get; set; }
     }
 }
