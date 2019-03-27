@@ -11,20 +11,65 @@ namespace pr2
     {
         private static Band GetDisturbed()
         {
-<<<<<<< HEAD
             Band Disturbed = new Band();
             Disturbed.Country = USA;
             Disturbed.StartYear = 1994;
             Disturbed.Lanuage = english;
-            Disturbed.Instruments = ;
+            Disturbed.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio;
             Disturbed.Genres = new Genres
             {
-               MainGenre = ;
-               Subgenres = ;
+               MainGenre = Metal;
+               Subgenres = alternativeMetal, nuMetal, heavyMetal, hardRock;
             }
-=======
-            Console.WriteLine("ХУЙ");
->>>>>>> dbe68f6f6ada26657d335259cdeb7834e8d75e9c
+            Disturbed.Members = new Members
+            {
+                Leader = DavidDraiman;
+                Others = DanDonegan, JohnMoyer, MikeWengren;
+
+            }
+            return Disturbed;
+            }
+
+        private static Band GetSlipknot()
+        {
+            Band Slipknot = new Band();
+            Slipknot.Country = USA;
+            Slipknot.StartYear = 1995;
+            Slipknot.Lanuage = english;
+            Slipknot.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio, DJmixer, KeyboardInstrument;
+            Slipknot.Genres = new Genres
+            {
+               MainGenre = Metal;
+               Subgenres = alternativeMetal, nuMetal, grooveMetal;
+            }
+            Slipknot.Members = new Members
+            {
+                Leader = CoreyTaylor;
+                Others = MickThompson, JamesRoot, ShawnCrahan, ChrisFehn, AlessandroVenturella, JayWeinberg, SidWyilson, CraigJones;
+
+            }
+            return Slipknot;
+        }
+
+        private static Band GetBringMeTheHorizon()
+        {
+            Band BringMeTheHorizon = new Band();
+            BringMeTheHorizon.Country = UK;
+            BringMeTheHorizon.StartYear = 2004;
+            BringMeTheHorizon.Lanuage = english;
+            BringMeTheHorizon.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio, KeyboardInstrument;
+            BringMeTheHorizon.Genres = new Genres
+            {
+               MainGenre = Metalcore;
+               Subgenres = alternativeRock, popMetal, grooveMetal;
+            }
+            BringMeTheHorizon.Members = new Members
+            {
+                Leader = OliverSykes;
+                Others = LiMalia, MattNicolls, MattKin, JordanFish;
+
+            }
+            return BringMeTheHorizon;
         }
     }
 }
