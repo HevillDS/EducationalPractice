@@ -11,6 +11,7 @@ namespace pr2
     {
         private static Band GetDisturbed()
         {
+<<<<<<< HEAD
             Band Disturbed = new Band();
             Disturbed.Country = USA;
             Disturbed.StartYear = 1994;
@@ -21,6 +22,9 @@ namespace pr2
                MainGenre = ;
                Subgenres = ;
             }
+=======
+            Console.WriteLine("ХУЙ");
+>>>>>>> dbe68f6f6ada26657d335259cdeb7834e8d75e9c
         }
     }
 }
