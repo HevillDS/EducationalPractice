@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "/home/hevill/pract/pract.csproj",
+  "ProjectFilePath": "/home/hevill/yuch/pr1/pract.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "UnsupportedRazor",
-    "LanguageVersion": "1.0",
-    "Extensions": [
-      {
-        "ExtensionName": "UnsupportedRazorExtension"
-      }
-    ]
-  }
+  "Configuration": null
 }
