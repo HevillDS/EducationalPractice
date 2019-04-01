@@ -1,0 +1,11 @@
+/home/hevill/yuch/mypr2/bin/Debug/netcoreapp2.2/mypr2.deps.json
+/home/hevill/yuch/mypr2/bin/Debug/netcoreapp2.2/mypr2.runtimeconfig.json
+/home/hevill/yuch/mypr2/bin/Debug/netcoreapp2.2/mypr2.runtimeconfig.dev.json
+/home/hevill/yuch/mypr2/bin/Debug/netcoreapp2.2/mypr2.dll
+/home/hevill/yuch/mypr2/bin/Debug/netcoreapp2.2/mypr2.pdb
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.csprojAssemblyReference.cache
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.csproj.CoreCompileInputs.cache
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.AssemblyInfoInputs.cache
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.AssemblyInfo.cs
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.dll
+/home/hevill/yuch/mypr2/obj/Debug/netcoreapp2.2/mypr2.pdb
