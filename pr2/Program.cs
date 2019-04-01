@@ -7,69 +7,202 @@ using System.Threading.Tasks;
 
 namespace pr2
 {
-    class Program
+    public class Program
     {
-        private static Band GetDisturbed()
+        public static Bike GetDartmoorHornet()
         {
-            Band Disturbed = new Band();
-            Disturbed.Country = USA;
-            Disturbed.StartYear = 1994;
-            Disturbed.Lanuage = english;
-            Disturbed.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio;
-            Disturbed.Genres = new Genres
+            Bike DartmoorHornet = new Bike();
+            DartmoorHornet.Purpose = "Enduro, AM";
+            DartmoorHornet.Price = 40000;
+            DartmoorHornet.Owner = "Hevill";
+            DartmoorHornet.Frame = new Frame
             {
-               MainGenre = Metal;
-               Subgenres = alternativeMetal, nuMetal, heavyMetal, hardRock;
-            }
-            Disturbed.Members = new Members
+               Company = "Dartmoor",
+               Model = "Hornet",
+               Year = "2013"
+            };
+            DartmoorHornet.Fork = new Fork
             {
-                Leader = DavidDraiman;
-                Others = DanDonegan, JohnMoyer, MikeWengren;
-
-            }
-            return Disturbed;
-            }
-
-        private static Band GetSlipknot()
-        {
-            Band Slipknot = new Band();
-            Slipknot.Country = USA;
-            Slipknot.StartYear = 1995;
-            Slipknot.Lanuage = english;
-            Slipknot.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio, DJmixer, KeyboardInstrument;
-            Slipknot.Genres = new Genres
+                Company = "RockShox",
+                Model = "Totem",
+                Stroke = 180
+            };
+            DartmoorHornet.Wheels = new Wheels
             {
-               MainGenre = Metal;
-               Subgenres = alternativeMetal, nuMetal, grooveMetal;
-            }
-            Slipknot.Members = new Members
-            {
-                Leader = CoreyTaylor;
-                Others = MickThompson, JamesRoot, ShawnCrahan, ChrisFehn, AlessandroVenturella, JayWeinberg, SidWyilson, CraigJones;
-
-            }
-            return Slipknot;
+                Tires = "Schwalbe Magic Mary",
+                Hubs = "Funn Fantom",
+                Diameter = 26,
+                Rims = "SunRingle Inferno 29",
+                Spokes = "DTswiss",
+                NumberOfSpokes = 32
+            };
+            return DartmoorHornet;
         }
 
-        private static Band GetBringMeTheHorizon()
+        public static Bike GetCommencal()
         {
-            Band BringMeTheHorizon = new Band();
-            BringMeTheHorizon.Country = UK;
-            BringMeTheHorizon.StartYear = 2004;
-            BringMeTheHorizon.Lanuage = english;
-            BringMeTheHorizon.Instruments = Vocal, BackVocal, SoloGuitar, RhythmGuitar, BassGuitar, Percussio, KeyboardInstrument;
-            BringMeTheHorizon.Genres = new Genres
+            Bike Commencal = new Bike();
+            Commencal.Purpose = "AM";
+            Commencal.Price = 50000;
+            Commencal.Owner = "Leha";
+            Commencal.Frame = new Frame
             {
-               MainGenre = Metalcore;
-               Subgenres = alternativeRock, popMetal, grooveMetal;
-            }
-            BringMeTheHorizon.Members = new Members
+               Company = "Commencal",
+               Model = "Meta HT",
+               Year = "2017"
+            };
+            Commencal.Fork = new Fork
             {
-                Leader = OliverSykes;
-                Others = LiMalia, MattNicolls, MattKin, JordanFish;
+                Company = "Fox",
+                Model = "36",
+                Stroke = 180
+            };
+            Commencal.Wheels = new Wheels
+            {
+                Tires = "Maxxis Minion",
+                Hubs = "Formula",
+                Diameter = 26,
+                Rims = "WTB STP i25",
+                Spokes = "DTswiss",
+                NumberOfSpokes = 32
+            };
+            return Commencal;
+        }
 
+        public static Bike GetDartmoorPrimal()
+        {
+            Bike DartmoorPrimal = new Bike();
+            DartmoorPrimal.Purpose = "AM, Trail";
+            DartmoorPrimal.Price = 75000;
+            DartmoorPrimal.Owner = "AaronGwin";
+            DartmoorPrimal.Frame = new Frame
+            {
+               Company = "Dartmoor",
+               Model = "Primal",
+               Year = "2017"
+            };
+            DartmoorPrimal.Fork = new Fork
+            {
+                Company = "RockShox",
+                Model = "Pike",
+                Stroke = 140
+            };
+            DartmoorPrimal.Wheels = new Wheels
+            {
+                Tires = "Schwalbe Nobby Nic",
+                Hubs = "Hope Evo Pro",
+                Diameter = 27.5,
+                Rims = "DTswiss",
+                Spokes = "DTswiss",
+                NumberOfSpokes = 32
+            };
+            return DartmoorPrimal;
+        }
+
+       
+        public static void Main(string[] args)
+        {
+            Bike DartmoorHornet = GetDartmoorHornet();
+            Bike Commencal = GetCommencal();
+            Bike DartmoorPrimal = GetDartmoorPrimal();
+
+            List<Bike> Bikes = new List<Bike>
+            {
+                DartmoorHornet,
+                Commencal,
+                DartmoorPrimal
+                
+            };
+            WriteBikesInfo(Bikes);
+            Console.WriteLine("Выберите номер сортировки:\n1)По диаметру колес;\n" +
+                "2)По ходу вилки\r\n");
+            int s = Convert.ToInt32(Console.ReadLine());
+            bool isOkInput = true;
+            if (s == 1)
+            {
+                SortByDiameter(Bikes, true);
+                Console.WriteLine("После сортировки по диаметру колес:");
             }
-            return BringMeTheHorizon;
+            else if (s == 2)
+            {
+                Bikes.Sort();
+                Console.WriteLine("После сортировки по ходу вилки:");
+            }
+            else
+            {
+                isOkInput = false;
+                Console.WriteLine("Неверный метод сортировки");
+            }
+            if (isOkInput)
+            {
+                WriteBikesInfo(Bikes);
+            }   
+
+            Console.ReadKey();
+        }
+
+         /// <summary>
+        ///  Сортировка по диаметру колес
+        /// </summary>
+        /// <param name="Bikes">список байков</param>
+        /// <param name="isAscending">сортировка по возрастанию</param>
+        public static void SortByDiameter(List<Bike> Bikes, bool isAscending)
+        {
+            for (int i = 0; i < Bikes.Wheels.Diameter; i++)
+            {
+                for (int j = 0; j < Bikes.Wheels.Diameter - i - 1; j++)
+                {
+                    if (isAscending)
+                    {
+                        if (Bikes[j].Wheels.Diameter > Bikes[j + 1].Wheels.Diameter)
+                        {
+                            Bike temp = Bikes[j];
+                            Bikes[j] = Bikes[j + 1];
+                            Bikes[j + 1] = temp;
+                        }
+                    }
+                    else
+                    {
+                        if (Bikes[j].Wheels.Diameter > Bikes[j + 1].Wheels.Diameter)
+                        {
+                            Bike temp = Bikes[j];
+                            Bikes[j] = Bikes[j + 1];
+                            Bikes[j + 1] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void WriteBikesInfo(List<Bike> Bikes)
+        {
+            Console.WriteLine("Список байков:\r\n");
+            int n = 1;
+            foreach(var Bike in Bikes)
+            {
+                Console.WriteLine($"Байк {n}:\r\n");
+                n++;
+                string BikeInfo = $"Назначение: {Bike.Purpose}\r\n" +
+                    $"Цена: {Bike.Price}\r\n" +
+                    $"Владелец: {Bike.Owner}\r\n" +
+                    $"Рама\r\n" +
+                    $"Производитель: {Bike.Frame.Company}\r\n" +
+                    $"Модель: {Bike.Frame.Model}\r\n" +
+                    $"Год производства: {Bike.Frame.Year}\r\n" +
+                    $"Вилка\r\n" +
+                    $"Производитель: {Bike.Fork.Company}\r\n" +
+                    $"Модель: {Bike.Fork.Model}\r\n" +
+                    $"Ход: {Bike.Fork.Stroke}\r\n" +
+                    $"Колеса\r\n" +
+                    $"Покрышки: {Bike.Wheels.Tires}\r\n" +
+                    $"Втулки: {Bike.Wheels.Hubs}\r\n" +
+                    $"Диаметр: {Bike.Wheels.Diameter}\r\n" +
+                    $"Обода: {Bike.Wheels.Rims}\r\n" +
+                    $"Спицы: {Bike.Wheels.Spokes}\r\n" +
+                    $"Кол-во спиц: {Bike.Wheels.NumberOfSpokes}\r\n";
+                }
+                Console.WriteLine(BikeInfo);
+            }
+
         }
     }
-}
