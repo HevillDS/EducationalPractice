@@ -9,85 +9,85 @@ namespace mypr2
 {
     class Program
     {
-        public static Bike GetDartmoorHornet()
+        public static Bike GetBike1()
         {
-            Bike DartmoorHornet = new Bike();
-            DartmoorHornet.Purpose = "Enduro, AM";
-            DartmoorHornet.Price = 40000;
-            DartmoorHornet.Owner = "Hevill";
-            DartmoorHornet.Frame = new Frame
+            Bike Bike1 = new Bike();
+            Bike1.Purpose = "Enduro, AM";
+            Bike1.Price = 40000;
+            Bike1.Owner = "Hevill";
+            Bike1.Frame = new Frame
             {
                Company = "Dartmoor",
                Model = "Hornet",
                Year = "2013"
             };
-            DartmoorHornet.Fork = new Fork
+            Bike1.Fork = new Fork
             {
                 Company = "RockShox",
                 Model = "Totem",
-                Stroke = 180
+                Stroke = "180"
             };
-            DartmoorHornet.Wheels = new Wheels
+            Bike1.Wheels = new Wheels
             {
                 Tires = "Schwalbe Magic Mary",
                 Hubs = "Funn Fantom",
-                Diameter = 26,
+                Diameter = 26.0,
                 Rims = "SunRingle Inferno 29",
                 Spokes = "DTswiss",
                 NumberOfSpokes = 32
             };
-            return DartmoorHornet;
+            return Bike1;
         }
 
-        public static Bike GetCommencal()
+        public static Bike GetBike2()
         {
-            Bike Commencal = new Bike();
-            Commencal.Purpose = "AM";
-            Commencal.Price = 50000;
-            Commencal.Owner = "Leha";
-            Commencal.Frame = new Frame
+            Bike Bike2 = new Bike();
+            Bike2.Purpose = "AM";
+            Bike2.Price = 50000;
+            Bike2.Owner = "Leha";
+            Bike2.Frame = new Frame
             {
                Company = "Commencal",
                Model = "Meta HT",
                Year = "2017"
             };
-            Commencal.Fork = new Fork
+            Bike2.Fork = new Fork
             {
                 Company = "Fox",
                 Model = "36",
-                Stroke = 180
+                Stroke = "180"
             };
-            Commencal.Wheels = new Wheels
+            Bike2.Wheels = new Wheels
             {
                 Tires = "Maxxis Minion",
                 Hubs = "Formula",
-                Diameter = 26,
+                Diameter = 26.0,
                 Rims = "WTB STP i25",
                 Spokes = "DTswiss",
                 NumberOfSpokes = 32
             };
-            return Commencal;
+            return Bike2;
         }
 
-        public static Bike GetDartmoorPrimal()
+        public static Bike GetBike3()
         {
-            Bike DartmoorPrimal = new Bike();
-            DartmoorPrimal.Purpose = "AM, Trail";
-            DartmoorPrimal.Price = 75000;
-            DartmoorPrimal.Owner = "AaronGwin";
-            DartmoorPrimal.Frame = new Frame
+            Bike Bike3 = new Bike();
+            Bike3.Purpose = "AM, Trail";
+            Bike3.Price = 75000;
+            Bike3.Owner = "AaronGwin";
+            Bike3.Frame = new Frame
             {
                Company = "Dartmoor",
                Model = "Primal",
                Year = "2017"
             };
-            DartmoorPrimal.Fork = new Fork
+            Bike3.Fork = new Fork
             {
                 Company = "RockShox",
                 Model = "Pike",
-                Stroke = 140
+                Stroke = "140"
             };
-            DartmoorPrimal.Wheels = new Wheels
+            Bike3.Wheels = new Wheels
             {
                 Tires = "Schwalbe Nobby Nic",
                 Hubs = "Hope Evo Pro",
@@ -96,26 +96,26 @@ namespace mypr2
                 Spokes = "DTswiss",
                 NumberOfSpokes = 32
             };
-            return DartmoorPrimal;
+            return Bike3;
         }
 
         static void Main(string[] args)
         {
-            Bike DartmoorHornet = GetDartmoorHornet();
-            Bike Commencal = GetCommencal();
-            Bike DartmoorPrimal = GetDartmoorPrimal();
+            Bike Bike1 = GetBike1();
+            Bike Bike2 = GetBike2();
+            Bike Bike3 = GetBike3();
 
             List<Bike> bikes = new List<Bike>
             {
-                DartmoorHornet,
-                Commencal,
-                DartmoorPrimal
+                Bike1,
+                Bike2,
+                Bike3
                 
             };
 
             WriteBikesInfo(bikes);
-            Console.WriteLine("Выберите номер сортировки:\n1)По диаметру колеса;\n" +
-                "2)По ходу вилки\r\n");
+            Console.WriteLine("Выберите номер сортировки:\n1)По диаметру колес;\n" +
+                "2)По модели рамы;\n" + "3)По ходу вилки\r\n");
             int s = Convert.ToInt32(Console.ReadLine());
             bool isOkInput = true;
             if (s == 1)
@@ -125,14 +125,14 @@ namespace mypr2
             }
             else if (s == 2)
             {
-                // bikes.Sort(new FrameModelComparer());
+                bikes.Sort(new FrameModelComparer());
                 Console.WriteLine("После сортировки по модели рамы");
             }
-            // else if (s == 3)
-            // {
-            //     bikes.Sort(new ForkStrokeComparer());
-            //     Console.WriteLine("После сортировки по ходу вилки:");
-            // }
+            else if (s == 3)
+            {
+                bikes.Sort(new ForkStrokeComparer());
+                Console.WriteLine("После сортировки по ходу вилки:");
+            }
             else
             {
                 isOkInput = false;
@@ -146,7 +146,7 @@ namespace mypr2
             Console.ReadKey();
         }
 
-        public static void WriteBikesInfo(List<Bike> Bikes)
+        public static void WriteBikesInfo(List<Bike> bikes)
         {
             Console.WriteLine("Список байков:\r\n");
             int n = 1;
@@ -172,8 +172,9 @@ namespace mypr2
                     $"Обода: {Bike.Wheels.Rims}\r\n" +
                     $"Спицы: {Bike.Wheels.Spokes}\r\n" +
                     $"Кол-во спиц: {Bike.Wheels.NumberOfSpokes}\r\n";
+
+                    Console.WriteLine(BikeInfo);
             }
         }
     }
-
 }

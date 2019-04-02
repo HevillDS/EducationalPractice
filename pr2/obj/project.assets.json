@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "/home/anna/.nuget/packages/": {},
+    "/home/hevill/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/anna/pract/EducationalPractice/pr2/pr2.csproj",
+      "projectUniqueName": "/home/hevill/yuch/pr2/pr2.csproj",
       "projectName": "pr2",
-      "projectPath": "/home/anna/pract/EducationalPractice/pr2/pr2.csproj",
-      "packagesPath": "/home/anna/.nuget/packages/",
-      "outputPath": "/home/anna/pract/EducationalPractice/pr2/obj/",
+      "projectPath": "/home/hevill/yuch/pr2/pr2.csproj",
+      "packagesPath": "/home/hevill/.nuget/packages/",
+      "outputPath": "/home/hevill/yuch/pr2/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/anna/.nuget/NuGet/NuGet.Config"
+        "/home/hevill/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

@@ -148,9 +148,9 @@ namespace pr2
         /// <param name="isAscending">сортировка по возрастанию</param>
         public static void SortByDiameter(List<Bike> Bikes, bool isAscending)
         {
-            for (int i = 0; i < Bikes.Wheels.Diameter; i++)
+            for (int i = 0; i < Bikes.Count(); i++)
             {
-                for (int j = 0; j < Bikes.Wheels.Diameter - i - 1; j++)
+                for (int j = 0; j < Bikes[i].Wheels.Diameter - i - 1; j++)
                 {
                     if (isAscending)
                     {
@@ -200,6 +200,22 @@ namespace pr2
                     $"Обода: {Bike.Wheels.Rims}\r\n" +
                     $"Спицы: {Bike.Wheels.Spokes}\r\n" +
                     $"Кол-во спиц: {Bike.Wheels.NumberOfSpokes}\r\n";
+                }
+                 int i = 1;
+                foreach(var diameter in Bike.Wheels.Diameter)
+                {
+                    BikeInfo += $"Колеса {i}\r\n" +
+                        $"Тип: {pickup.Type}\r\n" +
+                        $"Цвет: {pickup.Color}\r\n";
+                    i++;
+                }
+                i = 1;
+                foreach (var guitarString in Bike.Fork)
+                {
+                    BikeInfo += $"Вилка {i}\r\n" +
+                        $"Компания: {guitarString.Metal}\r\n" +
+                        $"Толщина: {guitarString.Gauge}\r\n";
+                    i++;
                 }
                 Console.WriteLine(BikeInfo);
             }

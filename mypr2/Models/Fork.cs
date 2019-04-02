@@ -6,6 +6,6 @@ namespace mypr2
     {
         public string Company { get; set; }
         public string Model { get; set; }
-        public int Stroke { get; set; }
+        public string Stroke { get; set; }
     }
 }
