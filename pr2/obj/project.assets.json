@@ -692,9 +692,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/hevill/yuch/pr2/pr2.csproj",
-      "projectName": "pr2",
-      "projectPath": "/home/hevill/yuch/pr2/pr2.csproj",
+      "projectUniqueName": "/home/hevill/yuch/pr2/mypr2.csproj",
+      "projectName": "mypr2",
+      "projectPath": "/home/hevill/yuch/pr2/mypr2.csproj",
       "packagesPath": "/home/hevill/.nuget/packages/",
       "outputPath": "/home/hevill/yuch/pr2/obj/",
       "projectStyle": "PackageReference",
